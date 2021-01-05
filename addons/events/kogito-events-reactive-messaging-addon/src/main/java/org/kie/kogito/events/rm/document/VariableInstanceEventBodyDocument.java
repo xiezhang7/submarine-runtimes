@@ -4,18 +4,27 @@ import java.util.Date;
 
 public class VariableInstanceEventBodyDocument {
 
-     String variableName;
-     Object variableValue;
-     Object variablePreviousValue;
-     Date changeDate;
-     String changedByNodeId;
-     String changedByNodeName;
-     String changedByNodeType;
-     String changedByUser;
-     String processInstanceId;
-     String rootProcessInstanceId;
-     String processId;
-     String rootProcessId;
+    String _id;
+    String variableName;
+    Object variableValue;
+    Object variablePreviousValue;
+    Date changeDate;
+    String changedByNodeId;
+    String changedByNodeName;
+    String changedByNodeType;
+    String changedByUser;
+    String processInstanceId;
+    String rootProcessInstanceId;
+    String processId;
+    String rootProcessId;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
     public String getVariableName() {
         return variableName;

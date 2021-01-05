@@ -8,6 +8,7 @@ import java.util.Set;
 
 public class ProcessInstanceEventBodyDocument {
 
+    String _id;
     String id;
     String parentInstanceId;
     String rootInstanceId;
@@ -23,6 +24,14 @@ public class ProcessInstanceEventBodyDocument {
     ProcessErrorEventBodyDocument error;
     List<String> roles;
     Set<MilestoneEventBodyDocument> milestones;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
     public String getId() {
         return id;

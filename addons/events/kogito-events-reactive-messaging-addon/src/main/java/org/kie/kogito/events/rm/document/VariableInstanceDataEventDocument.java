@@ -8,6 +8,7 @@ public class VariableInstanceDataEventDocument extends AbstractDataEventDocument
     VariableInstanceEventBodyDocument data;
 
     public VariableInstanceDataEventDocument(VariableInstanceDataEvent event) {
+        this.set_id(event.getId());
         this.setId(event.getId());
         this.setSpecVersion(event.getSpecVersion());
         this.setSource(event.getSource());

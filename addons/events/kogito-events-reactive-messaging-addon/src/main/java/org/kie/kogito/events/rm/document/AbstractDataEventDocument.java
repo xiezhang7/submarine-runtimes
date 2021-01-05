@@ -2,6 +2,7 @@ package org.kie.kogito.events.rm.document;
 
 public class AbstractDataEventDocument {
 
+    String _id;
     String id;
     String specVersion;
     String source;
@@ -15,6 +16,14 @@ public class AbstractDataEventDocument {
     String kogitoProcessId;
     String kogitoRootProcessId;
     String kogitoAddons;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
     public String getId() {
         return id;

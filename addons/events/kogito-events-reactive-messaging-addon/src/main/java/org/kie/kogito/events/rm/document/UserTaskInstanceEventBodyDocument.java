@@ -7,6 +7,7 @@ import java.util.Set;
 
 public class UserTaskInstanceEventBodyDocument {
 
+    String _id;
     String id;
     String taskName;
     String taskDescription;
@@ -27,6 +28,14 @@ public class UserTaskInstanceEventBodyDocument {
     String rootProcessInstanceId;
     String processId;
     String rootProcessId;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
     public String getId() {
         return id;

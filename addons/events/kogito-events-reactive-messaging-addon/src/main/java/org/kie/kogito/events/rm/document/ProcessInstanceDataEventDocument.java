@@ -14,6 +14,7 @@ public class ProcessInstanceDataEventDocument extends AbstractDataEventDocument 
     ProcessInstanceEventBodyDocument data;
 
     public ProcessInstanceDataEventDocument(ProcessInstanceDataEvent event) {
+        this.set_id(event.getId());
         this.setId(event.getId());
         this.setSpecVersion(event.getSpecVersion());
         this.setSource(event.getSource());
@@ -34,6 +35,7 @@ public class ProcessInstanceDataEventDocument extends AbstractDataEventDocument 
         this.setKogitoStartFromNode(event.getKogitoStartFromNode());
 
         ProcessInstanceEventBodyDocument bodyDoc = new ProcessInstanceEventBodyDocument();
+        bodyDoc.set_id(event.getData().getId());
         bodyDoc.setId(event.getData().getId());
         bodyDoc.setParentInstanceId(event.getData().getParentInstanceId());
         bodyDoc.setRootInstanceId(event.getData().getRootInstanceId());
@@ -47,6 +49,7 @@ public class ProcessInstanceDataEventDocument extends AbstractDataEventDocument 
         if (event.getData().getNodeInstances() != null) {
             bodyDoc.setNodeInstances(event.getData().getNodeInstances().stream().map(n -> {
                 NodeInstanceEventBodyDocument doc = new NodeInstanceEventBodyDocument();
+                doc.set_id(n.getId());
                 doc.setId(n.getId());
                 doc.setLeaveTime(n.getLeaveTime());
                 doc.setNodeDefinitionId(n.getNodeDefinitionId());
@@ -70,6 +73,7 @@ public class ProcessInstanceDataEventDocument extends AbstractDataEventDocument 
         if (event.getData().getMilestones() != null) {
             bodyDoc.setMilestones(event.getData().getMilestones().stream().map(m -> {
                 MilestoneEventBodyDocument doc = new MilestoneEventBodyDocument();
+                doc.set_id(m.getId());
                 doc.setId(m.getId());
                 doc.setName(m.getName());
                 doc.setStatus(m.getStatus());

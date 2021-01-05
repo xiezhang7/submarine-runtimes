@@ -11,6 +11,7 @@ public class UserTaskInstanceDataEventDocument extends AbstractDataEventDocument
     UserTaskInstanceEventBodyDocument data;
 
     public UserTaskInstanceDataEventDocument(UserTaskInstanceDataEvent event) {
+        this.set_id(event.getId());
         this.setId(event.getId());
         this.setSpecVersion(event.getSpecVersion());
         this.setSource(event.getSource());
@@ -29,6 +30,7 @@ public class UserTaskInstanceDataEventDocument extends AbstractDataEventDocument
         this.setKogitoUserTaskinstanceState(event.getKogitoUserTaskinstanceState());
 
         UserTaskInstanceEventBodyDocument bodyDoc = new UserTaskInstanceEventBodyDocument();
+        bodyDoc.set_id(event.getData().getId());
         bodyDoc.setId(event.getData().getId());
         bodyDoc.setTaskName(event.getData().getTaskName());
         bodyDoc.setTaskDescription(event.getData().getTaskDescription());

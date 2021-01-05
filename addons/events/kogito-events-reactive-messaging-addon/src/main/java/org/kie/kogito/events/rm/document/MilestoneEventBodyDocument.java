@@ -2,9 +2,18 @@ package org.kie.kogito.events.rm.document;
 
 public class MilestoneEventBodyDocument {
 
+    String _id;
     String id;
     String name;
     String status;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
     public String getId() {
         return id;

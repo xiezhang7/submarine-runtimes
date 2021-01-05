@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class NodeInstanceEventBodyDocument {
 
+    String _id;
     String id;
     String nodeId;
     String nodeDefinitionId;
@@ -11,6 +12,14 @@ public class NodeInstanceEventBodyDocument {
     String nodeType;
     Date triggerTime;
     Date leaveTime;
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
     public String getId() {
         return id;
